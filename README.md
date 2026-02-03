@@ -5,7 +5,7 @@
 ![Tomcat](https://img.shields.io/badge/Server-Tomcat_Embedded-orange)
 
 > **Proyecto de Simulación Bancaria con Arquitectura Segura (Security by Design).**
-> Este repositorio contiene el código fuente de un MVP (Producto Mínimo Viable) diseñado para demostrar prácticas de desarrollo seguro, validación de identidad (simulación RENAPO) y arquitectura de microservicios.
+> Este repositorio contiene el código fuente de un MVP (Producto Mínimo Viable) diseñado para demostrar prácticas de desarrollo seguro, validación de identidad (simulación RENAPO) y arquitectura de microservicios en su primer etapa (sin controles de seguridad).
 
 ---
 
