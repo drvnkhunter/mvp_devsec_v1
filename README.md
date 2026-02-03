@@ -103,8 +103,6 @@ Una vez validada la conectividad básica, se procederá a:
 **Daniel Cunjamá**  
 Máster en Ciberseguridad
 
-***
-
 ```text
 # Archivos de compilación y temporales
 /target/
