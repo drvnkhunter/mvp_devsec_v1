@@ -1,71 +1,66 @@
-# 🏦 Banca Móvil Secure - MVP
+# 🏦 Banca Móvil Secure - Fase 1 (MVP)
 
-![Kotlin](https://img.shields.io/badge/Kotlin-1.9-purple?logo=kotlin)
-![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-green?logo=springboot)
-![Flutter](https://img.shields.io/badge/Flutter-3.x-blue?logo=flutter)
-![Security](https://img.shields.io/badge/Security-OWASP_Mobile-red)
-
-> **Proyecto de Simulación Bancaria con Arquitectura Segura (Security by Design).**
-> Este repositorio contiene el código fuente de un MVP (Producto Mínimo Viable) diseñado para demostrar prácticas de desarrollo seguro, validación de identidad (simulación RENAPO) y arquitectura de microservicios en su etapa 1 (sin controles de seguridad).
+**Proyecto:** Simulación de Arquitectura Bancaria Segura
+**Versión:** 0.1.0 (Conectividad Inicial)
+**Desarrollador:** Daniel Cunjamá
 
 ---
 
-## 🏗 Arquitectura del Sistema
+## 🎯 Descripción del Avance
+Este repositorio contiene la estructura base del proyecto dividida en dos capas. El objetivo de esta etapa (Fase 1) es demostrar la **interoperabilidad** entre el servidor y el cliente móvil, sin aplicar aún los candados de seguridad (JWT/OAuth2) que se integrarán en la Fase 2.
 
-El sistema está desacoplado en dos componentes principales siguiendo una arquitectura Cliente-Servidor segura:
-
-1.  **Backend (Core Bancario):** Desarrollado en **Kotlin** con **Spring Boot**. Utiliza **Tomcat Embebido** para un despliegue autocontenido (`.jar`).
-2.  **Frontend (Cliente Móvil):** Desarrollado en **Flutter** para generar binarios nativos de Android.
-3.  **Base de Datos:** MySQL Relacional (Gestionado vía XAMPP en entorno local).
-
----
-
-## 🛠 Stack Tecnológico
-
-| Componente | Tecnología | Razón de Selección |
-| :--- | :--- | :--- |
-| **Backend** | Kotlin + Spring Boot 3 | Null Safety nativo y gestión eficiente de microservicios. |
-| **Frontend** | Flutter (Dart) | Desarrollo ágil de UI bancaria y compilación nativa ARM. |
-| **Server** | Apache Tomcat 10 (Embedded) | Portabilidad del artefacto y facilidad de escaneo SAST. |
-| **Database** | MySQL | Estándar relacional para transacciones ACID. |
-| **Seguridad** | Spring Security | Implementación futura de OAuth2/JWT y sanitización de inputs. |
+### Componentes:
+1.  **Backend (`/backend`):** API REST en Kotlin + Spring Boot (Tomcat Embebido).
+2.  **Frontend (`/frontend`):** Aplicación Móvil en Flutter.
 
 ---
 
-## 📋 Requisitos Previos
+## 🛠 Requisitos para Replicar el Entorno
 
-Para ejecutar este proyecto localmente, necesitas:
+Para ejecutar este código, el evaluador necesita tener instalado:
 
-* **Java Development Kit (JDK):** Versión 17 o superior.
-* **Flutter SDK:** Última versión estable.
-* **MySQL Server:** (Recomendado XAMPP para entorno Dev).
-* **IDE Sugerido:** IntelliJ IDEA (Backend) y VS Code (Frontend).
+* **Java JDK 17** (Versión LTS).
+* **IntelliJ IDEA Community** (Para ejecutar el Backend).
+* **Flutter SDK** y **Android Studio** (Para el emulador móvil).
+* **XAMPP** (Para la base de datos MySQL).
 
 ---
 
-## ⚙️ Guía de Instalación y Despliegue
+## 🚀 Guía de Ejecución Paso a Paso
 
-Sigue estos pasos para replicar el entorno de desarrollo:
+Sigue estas instrucciones para levantar el sistema tal como fue desarrollado.
 
-### 1. Configuración de Base de Datos
-1.  Inicia el servicio **MySQL** en XAMPP.
-2.  Crea una base de datos llamada `banca_db`.
-3.  *(Opcional)* Si existe un script `.sql` en la carpeta `/database`, impórtalo.
+### PASO 1: Ejecutar el Backend (Servidor)
+*El servidor se gestiona desde el entorno visual de IntelliJ IDEA.*
 
-### 2. Levantar el Backend (Servidor)
-Desde la terminal en la carpeta `/backend`:
-```bash
-# Opción A: Usando Maven Wrapper (Recomendado)
-./mvnw spring-boot:run
+1.  Abre **IntelliJ IDEA**.
+2.  Selecciona **File > Open** y busca la carpeta `/backend` de este repositorio.
+3.  Espera a que termine la indexación (barra inferior derecha).
+4.  En el menú lateral izquierdo, navega a:
+    `src` > `main` > `kotlin` > `com.banco.backend` > **`BackendApplication.kt`**
+5.  Da **Clic Derecho** sobre el archivo y selecciona **Run 'BackendApplication'**.
+6.  **Confirmación:** En la consola inferior verás el mensaje:
+    `Tomcat started on port(s): 8080 (http)`
 
-# Opción B: Ejecutar el JAR generado (Simulación Prod)
-java -jar target/banca-core-0.0.1-SNAPSHOT.jar
+### PASO 2: Validar el Endpoint (Prueba de Vida)
+Antes de abrir la app, verifica que el servidor responde. Abre tu navegador y ve a:
+
+👉 `http://localhost:8080/hola`
+
+**Debes ver este JSON:**
+```json
+{
+  "status": "OK",
+  "mensaje": "Hola Profe, el Backend con Kotlin está funcionando",
+  "tecnologia": "Tomcat Embebido + Spring Boot"
+}
 ```
 
-El servidor iniciará en: http://localhost:8080
-
-### 3. Ejecutar la App Móvil
-Desde la terminal en la carpeta /frontend:
+### 3. Ejecutar el Frontend (App Móvil)
+La aplicación móvil consume el servicio anterior.
+1.  Abre una terminal (o VS Code) en la carpeta /frontend.
+2.  Asegúrate de tener un emulador de Android abierto.
+3.  Ejecuta el comando:
 
 ```Bash
 # Instalar dependencias
@@ -74,28 +69,27 @@ flutter pub get
 # Ejecutar en Emulador Android
 flutter run
 ```
-Nota de Red: La aplicación está configurada para apuntar a 10.0.2.2:8080 (alias de localhost en emuladores Android).
+4.  La aplicación se instalará en el emulador.
+- Nota: La app está configurada para apuntar a 10.0.2.2:8080 (que es la dirección IP especial para que el emulador vea al localhost de la PC).
 
 ---
 
-## 🔒 Características de Seguridad (Roadmap)
+## 🔒 Estado de Funcionalidades
 
-Este proyecto está diseñado para ser auditado por herramientas **SAST** (por ejemplo, Veracode), siguiendo principios de *Security by Design*.
-
-- ✅ **Null Safety:** uso estricto de tipos en Kotlin para reducir errores en tiempo de ejecución.
-- 🚧 **Autenticación stateless:** implementación de JWT (en proceso).
-- 🚧 **Simulación RENAPO:** servicio interno para validación de identidad.
-- 🚧 **Hardening:** sanitización de DTOs para prevenir ataques como SQL Injection.
+- ✅ **Backend:** Servidor Tomcat Embebido - Completado
+- ✅ **Backend:** Endpoint de Prueba (REST) - Completado
+- ✅ **Frontend:** Pantalla de Login - Completado
+- 🔄 **Seguridad:** Autenticación JWT - Pendiente (Fase 2)
+- 🔄 **Frontend:** Conexión HTTP al Backend - Pendiente
 
 ---
 
-## ☁️ Escalabilidad (Futuro)
+## 🔮 Siguientes Pasos (Fase 2 - Hardening)
 
-Aunque el entorno actual es local (Windows), la arquitectura permite una migración transparente a la nube:
-
-- **Target:** VPS Linux (IONOS).
-- **Método:** despliegue del artefacto `.jar` como servicio `systemd`.
-- **Red:** configuración de reverse proxy con Nginx y SSL mediante Let's Encrypt.
+Una vez validada la conectividad básica, se procederá a:
+1.  Implementar **Spring Security** para proteger los endpoints.
+2.  Cifrar contraseñas con **BCrypt** en la base de datos.
+3.  Generar el reporte de escaneo de vulnerabilidades (**Veracode**).
 
 ---
 
