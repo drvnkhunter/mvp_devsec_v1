@@ -4,8 +4,8 @@
 ![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-green?logo=springboot)
 ![Tomcat](https://img.shields.io/badge/Server-Tomcat_Embedded-orange)
 
-> **Prueba de Concepto (POC): Inicialización de Arquitectura Segura.**
-> Este repositorio contiene la configuración inicial del **Backend** para el proyecto de Banca Móvil. El objetivo de esta fase es validar el entorno de ejecución, el contenedor de servlets embebido (Tomcat) y la exposición del primer Endpoint REST.
+> **Proyecto de Simulación Bancaria con Arquitectura Segura (Security by Design).**
+> Este repositorio contiene el código fuente de un MVP (Producto Mínimo Viable) diseñado para demostrar prácticas de desarrollo seguro, validación de identidad (simulación RENAPO) y arquitectura de microservicios.
 
 ---
 
@@ -68,7 +68,7 @@ Antes de abrir la app, verifica que el servidor responde. Abre tu navegador y ve
 ```json
 {
   "status": "OK",
-  "mensaje": "Hola Profe, el Backend con Kotlin está funcionando",
+  "mensaje": "Hola, el Backend con Kotlin está funcionando",
   "tecnologia": "Tomcat Embebido + Spring Boot"
 }
 ```
@@ -88,16 +88,6 @@ flutter run
 ```
 4.  La aplicación se instalará en el emulador.
 - Nota: La app está configurada para apuntar a 10.0.2.2:8080 (que es la dirección IP especial para que el emulador vea al localhost de la PC).
-
----
-
-## 🔒 Estado de Funcionalidades
-
-- ✅ **Backend:** Servidor Tomcat Embebido - Completado
-- ✅ **Backend:** Endpoint de Prueba (REST) - Completado
-- ✅ **Frontend:** Pantalla de Login - Completado
-- 🔄 **Seguridad:** Autenticación JWT - Pendiente (Fase 2)
-- 🔄 **Frontend:** Conexión HTTP al Backend - Pendiente
 
 ---
 
