@@ -6,7 +6,7 @@
 ![Security](https://img.shields.io/badge/Security-OWASP_Mobile-red)
 
 > **Proyecto de Simulación Bancaria con Arquitectura Segura (Security by Design).**
-> Este repositorio contiene el código fuente de un MVP (Producto Mínimo Viable) diseñado para demostrar prácticas de desarrollo seguro, validación de identidad (simulación RENAPO) y arquitectura de microservicios.
+> Este repositorio contiene el código fuente de un MVP (Producto Mínimo Viable) diseñado para demostrar prácticas de desarrollo seguro, validación de identidad (simulación RENAPO) y arquitectura de microservicios en su etapa 1 (sin controles de seguridad).
 
 ---
 
