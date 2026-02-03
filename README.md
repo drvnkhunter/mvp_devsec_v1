@@ -67,38 +67,38 @@ El servidor iniciará en: http://localhost:8080
 ### 3. Ejecutar la App Móvil
 Desde la terminal en la carpeta /frontend:
 
-Bash
+```Bash
 # Instalar dependencias
 flutter pub get
 
 # Ejecutar en Emulador Android
 flutter run
+```
 Nota de Red: La aplicación está configurada para apuntar a 10.0.2.2:8080 (alias de localhost en emuladores Android).
 
-# 🔒 Características de Seguridad (Roadmap)
-Este proyecto está diseñado para ser auditado por herramientas SAST (como Veracode).
+## 🔒 Características de Seguridad (Roadmap)
 
-✅ Null Safety: Uso estricto de tipos en Kotlin.
+Este proyecto está diseñado para ser auditado por herramientas **SAST** (por ejemplo, Veracode), siguiendo principios de *Security by Design*.
 
-🚧 Autenticación Stateless: Implementación de JWT (En proceso).
+- ✅ **Null Safety:** uso estricto de tipos en Kotlin para reducir errores en tiempo de ejecución.
+- 🚧 **Autenticación stateless:** implementación de JWT (en proceso).
+- 🚧 **Simulación RENAPO:** servicio interno para validación de identidad.
+- 🚧 **Hardening:** sanitización de DTOs para prevenir ataques como SQL Injection.
 
-🚧 Simulación RENAPO: Servicio interno de validación de identidad.
+---
 
-🚧 Hardening: Sanitización de DTOs para prevenir SQL Injection.
+## ☁️ Escalabilidad (Futuro)
 
-☁️ Escalabilidad (Futuro)
 Aunque el entorno actual es local (Windows), la arquitectura permite una migración transparente a la nube:
 
-Target: VPS Linux (Ionos).
+- **Target:** VPS Linux (IONOS).
+- **Método:** despliegue del artefacto `.jar` como servicio `systemd`.
+- **Red:** configuración de reverse proxy con Nginx y SSL mediante Let's Encrypt.
 
-Método: Despliegue del artefacto .jar como servicio systemd.
+---
 
-Red: Configuración de Reverse Proxy (Nginx) y SSL (Let's Encrypt).
-
-Daniel Cunjamá
-
+**Daniel Cunjamá**  
 Máster en Ciberseguridad
-
 
 ***
 
