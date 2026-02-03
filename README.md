@@ -64,8 +64,6 @@ java -jar target/banca-core-0.0.1-SNAPSHOT.jar
 
 El servidor iniciará en: http://localhost:8080
 
----
-
 ### 3. Ejecutar la App Móvil
 Desde la terminal en la carpeta /frontend:
 
