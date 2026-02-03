@@ -7,7 +7,6 @@
 > **Proyecto de Simulación Bancaria con Arquitectura Segura (Security by Design).**
 > Este repositorio contiene el código fuente de un MVP (Producto Mínimo Viable) diseñado para demostrar prácticas de desarrollo seguro, validación de identidad (simulación RENAPO) y arquitectura de microservicios en su primer etapa (sin controles de seguridad).
 
----
 
 ## 🏗 Estado Actual del Proyecto (Fase 1)
 
@@ -18,7 +17,6 @@ Se ha completado la configuración del entorno "Server-Side" con las siguientes 
 3.  **API REST:** Creación del primer controlador (`SaludoController`) para validar conectividad HTTP.
 4.  **Gestor de Dependencias:** Maven configurado para futuras librerías de seguridad.
 
----
 
 ## 🛠 Stack Tecnológico Confirmado
 
@@ -30,7 +28,7 @@ Se ha completado la configuración del entorno "Server-Side" con las siguientes 
 | **Base de Datos** | MySQL | 🔄 En Proceso de Integración |
 | **Cliente Móvil** | Flutter | 🔄 En Proceso de Integración |
 
----
+
 
 ## 📋 Guía de Ejecución (Cómo probar este avance)
 
@@ -41,7 +39,7 @@ Para ejecutar este código, el evaluador necesita tener instalado:
 * **Flutter SDK** y **Android Studio** (Para el emulador móvil).
 * **XAMPP** (Para la base de datos MySQL).
 
----
+
 
 ## 🚀 Guía de Ejecución Paso a Paso
 
@@ -89,7 +87,7 @@ flutter run
 4.  La aplicación se instalará en el emulador.
 - Nota: La app está configurada para apuntar a 10.0.2.2:8080 (que es la dirección IP especial para que el emulador vea al localhost de la PC).
 
----
+
 
 ## 🔮 Siguientes Pasos (Fase 2 - Hardening)
 
@@ -98,7 +96,7 @@ Una vez validada la conectividad básica, se procederá a:
 2.  Cifrar contraseñas con **BCrypt** en la base de datos.
 3.  Generar el reporte de escaneo de vulnerabilidades (**Veracode**).
 
----
+
 
 **Daniel Cunjamá**  
 Máster en Ciberseguridad
