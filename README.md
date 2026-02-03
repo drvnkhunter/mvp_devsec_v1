@@ -87,7 +87,7 @@ flutter pub get
 flutter run
 ```
 4.  La aplicación se instalará en el emulador.
-# Nota: La app está configurada para apuntar a 10.0.2.2:8080 (que es la dirección IP especial para que el emulador vea al localhost de la PC).
+- Nota: La app está configurada para apuntar a 10.0.2.2:8080 (que es la dirección IP especial para que el emulador vea al localhost de la PC).
 
 ---
 
