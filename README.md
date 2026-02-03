@@ -76,6 +76,8 @@ flutter run
 ```
 Nota de Red: La aplicación está configurada para apuntar a 10.0.2.2:8080 (alias de localhost en emuladores Android).
 
+---
+
 ## 🔒 Características de Seguridad (Roadmap)
 
 Este proyecto está diseñado para ser auditado por herramientas **SAST** (por ejemplo, Veracode), siguiendo principios de *Security by Design*.
