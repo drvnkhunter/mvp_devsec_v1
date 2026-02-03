@@ -1,21 +1,38 @@
-# 🏦 Banca Móvil Secure - Fase 1 (MVP)
+# 🏦 Banca Móvil Secure - Backend Core (v0.1 - POC)
 
-**Proyecto:** Simulación de Arquitectura Bancaria Segura
-**Versión:** 0.1.0 (Conectividad Inicial)
-**Desarrollador:** Daniel Cunjamá
+![Kotlin](https://img.shields.io/badge/Kotlin-1.9-purple?logo=kotlin)
+![Spring Boot](https://img.shields.io/badge/Spring_Boot-3.x-green?logo=springboot)
+![Tomcat](https://img.shields.io/badge/Server-Tomcat_Embedded-orange)
 
----
-
-## 🎯 Descripción del Avance
-Este repositorio contiene la estructura base del proyecto dividida en dos capas. El objetivo de esta etapa (Fase 1) es demostrar la **interoperabilidad** entre el servidor y el cliente móvil, sin aplicar aún los candados de seguridad (JWT/OAuth2) que se integrarán en la Fase 2.
-
-### Componentes:
-1.  **Backend (`/backend`):** API REST en Kotlin + Spring Boot (Tomcat Embebido).
-2.  **Frontend (`/frontend`):** Aplicación Móvil en Flutter.
+> **Prueba de Concepto (POC): Inicialización de Arquitectura Segura.**
+> Este repositorio contiene la configuración inicial del **Backend** para el proyecto de Banca Móvil. El objetivo de esta fase es validar el entorno de ejecución, el contenedor de servlets embebido (Tomcat) y la exposición del primer Endpoint REST.
 
 ---
 
-## 🛠 Requisitos para Replicar el Entorno
+## 🏗 Estado Actual del Proyecto (Fase 1)
+
+Se ha completado la configuración del entorno "Server-Side" con las siguientes características:
+
+1.  **Motor:** Configuración de **Spring Boot 3** con **Kotlin**.
+2.  **Servidor:** Implementación de **Apache Tomcat 10 (Embebido)** para despliegue mediante JAR.
+3.  **API REST:** Creación del primer controlador (`SaludoController`) para validar conectividad HTTP.
+4.  **Gestor de Dependencias:** Maven configurado para futuras librerías de seguridad.
+
+---
+
+## 🛠 Stack Tecnológico Confirmado
+
+| Componente | Selección | Estatus |
+| :--- | :--- | :--- |
+| **Lenguaje** | Kotlin (JDK 17) | ✅ Implementado |
+| **Framework** | Spring Boot 3 (Web) | ✅ Implementado |
+| **Despliegue** | Archivo .JAR (Standalone) | ✅ Configurado |
+| **Base de Datos** | MySQL | 🔄 En Proceso de Integración |
+| **Cliente Móvil** | Flutter | 🔄 En Proceso de Integración |
+
+---
+
+## 📋 Guía de Ejecución (Cómo probar este avance)
 
 Para ejecutar este código, el evaluador necesita tener instalado:
 
