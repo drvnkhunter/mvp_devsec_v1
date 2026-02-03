@@ -62,7 +62,7 @@ Sigue estas instrucciones para levantar el sistema tal como fue desarrollado.
 ### PASO 2: Validar el Endpoint (Prueba de Vida)
 Antes de abrir la app, verifica que el servidor responde. Abre tu navegador y ve a:
 
-👉 `http://localhost:8080/hola`
+`http://localhost:8080/hola`
 
 **Debes ver este JSON:**
 ```json
