@@ -60,7 +60,11 @@ Desde la terminal en la carpeta `/backend`:
 
 # Opción B: Ejecutar el JAR generado (Simulación Prod)
 java -jar target/banca-core-0.0.1-SNAPSHOT.jar
+```
+
 El servidor iniciará en: http://localhost:8080
+
+---
 
 ### 3. Ejecutar la App Móvil
 Desde la terminal en la carpeta /frontend:
@@ -114,3 +118,4 @@ Máster en Ciberseguridad
 /frontend/build/
 /frontend/.dart_tool/
 /frontend/.pub/
+```
