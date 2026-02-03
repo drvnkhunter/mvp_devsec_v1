@@ -62,7 +62,7 @@ Desde la terminal en la carpeta `/backend`:
 java -jar target/banca-core-0.0.1-SNAPSHOT.jar
 El servidor iniciará en: http://localhost:8080
 
-3. Ejecutar la App Móvil
+### 3. Ejecutar la App Móvil
 Desde la terminal en la carpeta /frontend:
 
 Bash
@@ -73,7 +73,7 @@ flutter pub get
 flutter run
 Nota de Red: La aplicación está configurada para apuntar a 10.0.2.2:8080 (alias de localhost en emuladores Android).
 
-🔒 Características de Seguridad (Roadmap)
+# 🔒 Características de Seguridad (Roadmap)
 Este proyecto está diseñado para ser auditado por herramientas SAST (como Veracode).
 
 ✅ Null Safety: Uso estricto de tipos en Kotlin.
